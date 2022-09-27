@@ -2,7 +2,7 @@ import cors from "cors";
 import "dotenv/config";
 import express from "express";
 import { router } from "./routes/routes";
-import db from "./config/mongo"
+import dbConnect from "./config/mongo"
 
 const PORT = process.env.PORT || 3001
 
@@ -13,7 +13,7 @@ app.use(cors()) //* Puede ser consumido por cualquier origen*/
 app.use(router)
 
 
-db().then(() => console.log("Connect"))
+dbConnect().then(() => console.log("Connect"))
 
 
 app.listen(PORT, () => console.log(`Listen api rest with port ${PORT}`))
