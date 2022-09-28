@@ -8,6 +8,7 @@ import { handleHttp } from "../utils/error.handle";
 const getFile = async (req: RequestExt, res: Response) => {
     try {
         const { user, file } = req;
+        console.log(req)
         const dataToRegister: Storage = {
             fileName: `${file?.filename}`,
             idUser: `${user?.id}`,

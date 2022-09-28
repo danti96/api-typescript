@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getItems } from "../controllers/order";
-import { checkJwt } from "../middleware/session_middleware";
+import { checkJwt } from "../middleware/session";
 /**
  * Esta ruta solo se puede acceder las personas que tienen session activa!
  * que tenga JWT valido!
