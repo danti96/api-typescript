@@ -5,7 +5,6 @@ import { RequestExt } from "../interfaces/jwt.interface"
 
 const getItems = (request: RequestExt, response: Response) => {
     try {
-
         response.send({
             data: "sesion valida",
             user: request.user
